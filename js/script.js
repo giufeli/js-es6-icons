@@ -153,7 +153,9 @@ for(let i = 0; i < arrIcon.length; i++){
     const eleDiv = document.createElement('div')
     eleDiv.classList.add('col-2');
     eleDiv.classList.add('box');
-    eleDiv.innerHTML = `<i class="${arrIcon[i].family} ${arrIcon[i].prefix}${arrIcon[i].name}"></i>`
+    eleDiv.innerHTML = `
+	<i class="${arrIcon[i].family} ${arrIcon[i].prefix}${arrIcon[i].name}"></i>
+	<div>${arrIcon[i].name}</div>`
     eleDiv.style.color = arrIcon[i].color;
     row.append(eleDiv)
 }
@@ -165,49 +167,57 @@ category.addEventListener('change', function () {
     if(this.value == 'all'){
         row.innerHTML = "";
         for(let i = 0; i < arrIcon.length; i++){
-            const eleDiv = document.createElement('div')
-            eleDiv.classList.add('col-2');
-            eleDiv.classList.add('box');
-            eleDiv.innerHTML = `<i class="${arrIcon[i].family} ${arrIcon[i].prefix}${arrIcon[i].name}"></i>`
-            eleDiv.style.color = arrIcon[i].color;
-            row.append(eleDiv)
-        }
+			const eleDiv = document.createElement('div')
+			eleDiv.classList.add('col-2');
+			eleDiv.classList.add('box');
+			eleDiv.innerHTML = `
+			<i class="${arrIcon[i].family} ${arrIcon[i].prefix}${arrIcon[i].name}"></i>
+			<div>${arrIcon[i].name}</div>`
+			eleDiv.style.color = arrIcon[i].color;
+			row.append(eleDiv)
+		}
     };
 
     if(this.value == 'animal'){
         row.innerHTML = "";
         for(let i = 0; i < animal.length; i++){
-            const eleDiv = document.createElement('div')
-            eleDiv.classList.add('col-2');
-            eleDiv.classList.add('box');
-            eleDiv.innerHTML = `<i class="${animal[i].family} ${animal[i].prefix}${animal[i].name}"></i>`
-            eleDiv.style.color = animal[i].color;
-            row.append(eleDiv)
-        }
+			const eleDiv = document.createElement('div')
+			eleDiv.classList.add('col-2');
+			eleDiv.classList.add('box');
+			eleDiv.innerHTML = `
+			<i class="${animal[i].family} ${animal[i].prefix}${animal[i].name}"></i>
+			<div>${animal[i].name}</div>`
+			eleDiv.style.color = animal[i].color;
+			row.append(eleDiv)
+		}
     };
 
     if(this.value == 'vegetable'){
         row.innerHTML = "";
         for(let i = 0; i < vegetable.length; i++){
-            const eleDiv = document.createElement('div')
-            eleDiv.classList.add('col-2');
-            eleDiv.classList.add('box');
-            eleDiv.innerHTML = `<i class="${vegetable[i].family} ${vegetable[i].prefix}${vegetable[i].name}"></i>`
-            eleDiv.style.color = vegetable[i].color;
-            row.append(eleDiv)
-        }
+			const eleDiv = document.createElement('div')
+			eleDiv.classList.add('col-2');
+			eleDiv.classList.add('box');
+			eleDiv.innerHTML = `
+			<i class="${vegetable[i].family} ${vegetable[i].prefix}${vegetable[i].name}"></i>
+			<div>${vegetable[i].name}</div>`
+			eleDiv.style.color = vegetable[i].color;
+			row.append(eleDiv)
+		}
     };
 
     if(this.value == 'user'){
         row.innerHTML = "";
         for(let i = 0; i < user.length; i++){
-            const eleDiv = document.createElement('div')
-            eleDiv.classList.add('col-2');
-            eleDiv.classList.add('box');
-            eleDiv.innerHTML = `<i class="${user[i].family} ${user[i].prefix}${user[i].name}"></i>`
-            eleDiv.style.color = user[i].color;
-            row.append(eleDiv)
-        }
+			const eleDiv = document.createElement('div')
+			eleDiv.classList.add('col-2');
+			eleDiv.classList.add('box');
+			eleDiv.innerHTML = `
+			<i class="${user[i].family} ${user[i].prefix}${user[i].name}"></i>
+			<div>${user[i].name}</div>`
+			eleDiv.style.color = user[i].color;
+			row.append(eleDiv)
+		}
     }
 });
 
